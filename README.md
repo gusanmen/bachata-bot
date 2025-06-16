@@ -1,2 +1,2 @@
 # bachata-bot
-Pues para enviar un paso diário a mis chic@s
+Pues para enviar un paso diario a mis chic@s
