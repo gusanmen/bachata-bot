@@ -41,7 +41,7 @@ def obtener_fila_aleatoria():
 def enviar_correo(contenido):
     cuerpo = "\n".join([f"{k}: {v}" for k, v in contenido.items()])
     mensaje = MIMEText(cuerpo, 'plain', 'utf-8')
-    mensaje["Subject"] = Header("¡A Bailar! un paso de Bachata Diariamente, que no se te olvide", "utf-8")
+    mensaje["Subject"] = Header("¡A Bailar! un paso de Bachata Diariamente, ¡que no se te olvide!", "utf-8")
     mensaje["From"] = formataddr((str(Header("Airtable Bot", "utf-8")), EMAIL_USER))
     mensaje["To"] = DESTINATARIOS
 
