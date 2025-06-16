@@ -6,7 +6,7 @@ from email.header import Header
 from email.utils import formataddr
 
 # Configuración de Airtable
-AIRTABLE_API_KEY = 'patnIqhce9hDYI0g9.3853a5cdb6babe9f6f42bca55475ca70d31122154a3745ec4219ab29213f82f2'
+AIRTABLE_API_KEY = os.getenv("AIRTABLE_API_KEY")
 BASE_ID = 'appQWpQImABOspxQ6'
 TABLE_NAME = 'Tabla'
 AIRTABLE_URL = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
@@ -17,8 +17,8 @@ HEADERS = {
 # Configuración del correo
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-EMAIL_USER = "ggusanmen@gmail.com"
-EMAIL_PASS = "jpov uwrb zkdk oyyu"
+EMAIL_USER = os.getenv("EMAIL_USER")
+EMAIL_PASS = os.getenv("EMAIL_PASS")
 DESTINATARIOS = "ggusanmen@gmail.com,mlocamu@gmail.com,thaiscintascamacho@gmail.com,cintasthais@gmail.com,appivan99@gmail.com,sbmtrgh5tj@privaterelay.appleid.com,mrosacm67@gmail.com,iriscintascamacho@gmail.com,romuangel@gmail.com,mariangeles.camu@hotmail.com,paaulasscc@gmail.com,"
 lista_destinatarios = [email.strip() for email in DESTINATARIOS.split(",") if email.strip()]
 
