@@ -21,7 +21,7 @@ SMTP_PORT = 587
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 # DESTINATARIOS = "ggusanmen@gmail.com"
-DESTINATARIOS = "ggusanmen@gmail.com,mlocamu@gmail.com,thaiscintascamacho@gmail.com,appivan99@gmail.com,luciasc2020@gmail.com,sbmtrgh5tj@privaterelay.appleid.com,mrosacm67@gmail.com,iriscintascamacho@gmail.com,romuangel@gmail.com,mariangeles.camu@hotmail.com,paaulasscc@gmail.com,"
+DESTINATARIOS = "ggusanmen@gmail.com,mlocamu@gmail.com,thaiscintascamacho@gmail.com,appivan99@gmail.com,luciasc2020@gmail.com,romugarces@gmail.com,mrosacm67@gmail.com,iriscintascamacho@gmail.com,mariangeles.camu@hotmail.com,paaulasscc@gmail.com,"
 lista_destinatarios = [email.strip() for email in DESTINATARIOS.split(",") if email.strip()]
 
 def obtener_fila_aleatoria():
