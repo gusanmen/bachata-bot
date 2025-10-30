@@ -46,10 +46,10 @@ def enviar_correo(contenido):
         "Nom",
         "Notes",
         "Video",
-        "Video Musica",
-        "Coreografia",
+        "Video Música",
+        "Coreografía",
         "Nemotecnia",
-        "Calificacion"
+        "Calificació"
     ]
 
     # Construir cuerpo en el orden definido
