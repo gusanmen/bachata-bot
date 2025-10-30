@@ -40,7 +40,34 @@ def obtener_fila_aleatoria():
     return registro["fields"]
 
 def enviar_correo(contenido):
-    cuerpo = "\n".join([f"{k}: {v}" for k, v in contenido.items()])
+    # Orden específico de campos
+    orden_campos = [
+        "Data",
+        "Nom",
+        "Notes",
+        "Video",
+        "Video Musica",
+        "Coreografia",
+        "Nemotecnia",
+        "Calificacion"
+    ]
+
+    # Construir cuerpo en el orden definido
+    cuerpo_lineas = []
+
+    for campo in orden_campos:
+        if campo in contenido:
+            cuerpo_lineas.append(f"{campo}: {contenido[campo]}")
+
+    # Agregar otros campos no definidos en el orden (si existen)
+    otros_campos = [k for k in contenido if k not in orden_campos]
+    for campo in otros_campos:
+        cuerpo_lineas.append(f"{campo}: {contenido[campo]}")
+
+    # Unir todo en un solo texto
+    cuerpo = "\n".join(cuerpo_lineas)
+
+    # Crear mensaje de correo
     mensaje = MIMEText(cuerpo, 'plain', 'utf-8')
     mensaje["Subject"] = Header("¡Qué alegría!, un paso de Bachata al día 💃🏽🕺", "utf-8")
     mensaje["From"] = formataddr((str(Header("Airtable Bot", "utf-8")), EMAIL_USER))
