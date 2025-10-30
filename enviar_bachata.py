@@ -70,7 +70,7 @@ def enviar_correo(contenido):
     # Crear mensaje de correo
     mensaje = MIMEText(cuerpo, 'plain', 'utf-8')
     mensaje["Subject"] = Header("¡Qué alegría!, un paso de Bachata al día 💃🏽🕺", "utf-8")
-    mensaje["From"] = formataddr((str(Header("Airtable Bot", "utf-8")), EMAIL_USER))
+    mensaje["From"] = formataddr((str(Header("Bachata Bot", "utf-8")), EMAIL_USER))
     mensaje["To"] = DESTINATARIOS
 
     try:
